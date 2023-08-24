@@ -14,32 +14,43 @@ let binary1 = 0;
   })();
   binary1 = 1;
 }
-
-
-let ts = document.querySelectorAll('.slide');
-function movement(s) {
-    gsap.set(s, {
-        opacity: 0,
-        
-    });
-    gsap.to(s, {
-  scrollTrigger: {
-    trigger: s,
-    start: "top 60%",
-    end: "+=40%",
-    scrub: true,
-  },
-  opacity: 1,
-    },);   
+ function is_touch_enabled() {
+   return (
+     "ontouchstart" in window ||
+     navigator.maxTouchPoints > 0 ||
+     navigator.msMaxTouchPoints > 0
+   );
 }
-for (let i = 0; i < ts.length; i++){
+let ts = document.querySelectorAll(".slide");
+
+if (is_touch_enabled()) {
+
+}
+else {
+
+function movement(s) {
+  gsap.set(s, {
+    opacity: 0,
+  });
+  gsap.to(s, {
+    scrollTrigger: {
+      trigger: s,
+      start: "top 60%",
+      end: "+=40%",
+      scrub: true,
+    },
+    opacity: 1,
+  });
+}
+for (let i = 0; i < ts.length; i++) {
   movement(ts[i]);
 }
-gsap.to('p.f', {
+gsap.to("p.f", {
   opacity: 1,
   duration: 1.4,
   y: 40,
-});
+}); }
+
 
 
 
@@ -49,7 +60,6 @@ let observer = new IntersectionObserver(
   function (entries) {
     if (entries[0].isIntersecting === true) {
       if (binary == 0) {
-        console.log('yes');
         let string = " this is where i show people my work.";
         let str = string.split("");
         let el = document.getElementById("main");
@@ -62,7 +72,6 @@ let observer = new IntersectionObserver(
         })();
       }
     } else {
-      console.log('no');
     }
   },
   { threshold: [0.4] }
