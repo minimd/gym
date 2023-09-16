@@ -11,6 +11,5 @@ let i_btn = document.querySelector(".number button");
 
 function print() {
   namee.textContent = i_name.value;
-  number.textContent = i_number.value;
 }
 i_btn.addEventListener("click", print);
