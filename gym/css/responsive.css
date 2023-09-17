@@ -48,11 +48,11 @@ section.sixth {
   height: 450px;
 
 }
-section.sixth div.right div.photo_card p.name {
+section.sixth div.right div.photo_card p.name sss{
   
   left: 10%;
 }
-section.sixth div.right div.photo_card p.phone_number {
+ssss {
   top: 77%;
   
 }
@@ -108,13 +108,13 @@ section.sixth {
   height: 420px;
 
 }
-section.sixth div.right div.photo_card p.name {
+section.sixth div.right div.photo_card p.name sss{
   
   left: 12%;
   top: 54%;
   font-size: 0.8rem;
 }
-section.sixth div.right div.photo_card p.phone_number {
+ssss {
   top: 70%;
   
 }
@@ -170,13 +170,13 @@ section.sixth {
   height: 420px;
 
 }
-section.sixth div.right div.photo_card p.name {
+section.sixth div.right div.photo_card p.name sss{
   
   left: 13%;
   top: 52%;
   font-size: 0.8rem;
 }
-section.sixth div.right div.photo_card p.phone_number {
+ssss {
   top: 65%;
   
 }
@@ -231,13 +231,13 @@ section.sixth div.right {
   width: 90%;
   height: 100%;
 }
-section.sixth div.right div.photo_card p.name {
+section.sixth div.right div.photo_card p.name sss{
   
   left: 13%;
   top: 55%;
   font-size: 1rem;
 }
-section.sixth div.right div.photo_card p.phone_number {
+ssss {
   top: 74%;
   
 }
@@ -383,15 +383,16 @@ section.seventh{
 section.last{
   display: none;
 }
-section.sixth div.right div.photo_card p.name {
+section.sixth div.right div.photo_card p.name sss{
   
   left: 13%;
   top: 52%;
   font-size: 0.6rem;
 }
-section.sixth div.right div.photo_card p.phone_number {
+ssss {
   top: 63%;
   font-size: 0.6rem;
   
 }
 }
+
