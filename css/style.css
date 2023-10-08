@@ -85,7 +85,7 @@ div.last {
   background-color: #e1e1e1;
   background-size: contain;
   width: 100%;
-  filter: drop-shadow(0px -20px 130px #4e4e4e);
+  filter: drop-shadow(0px -20px 30px #4e4e4e);
   display: flex;
   flex-direction: column;
   justify-content: baseline;
