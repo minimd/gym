@@ -386,10 +386,16 @@ div.footer div.contact_info img {
   background-color:rgba(0, 0, 0, 0.3);
   position: fixed;
 }
+input{
+  width: 300px;
+  height: 50px;
+  border: 2px solid #5dd6cf;
+  border-radius: 8px;
+}
 .note .standard_div{
   background-color: #ffffff;
-  width: 500px;
-  height: 300px;
+  width: 800px;
+  height: 550px;
   position: fixed;
   gap: 20px;
   display: flex;

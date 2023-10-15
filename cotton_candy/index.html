@@ -79,10 +79,7 @@
         </div>
         <div class="description">
           <div class="ps">
-            <p class="default var">
-              we are currently open
-            
-            </p>
+            <p class="default var">we are currently open</p>
             <p class="default w10">our work time is always 10am-6pm</p>
           </div>
           <iframe
@@ -125,7 +122,7 @@
             <p class="final_discount">discount available</p>
           </div>
           <div class="final">
-            <p class="default">0$</p>
+            <p class="default price">0$</p>
             <button class="reset-btn">checkout</button>
           </div>
         </div>
@@ -150,16 +147,26 @@
     </section>
     <div class="note disabled">
       <div class="standard_div">
-        <p class="default">thank you for your purchase</p>
-        <button class="reset-btn">close</button>
+        <form id="form">
+          <p class="default">confirm order</p>
+          <label>
+            <p class="default">your name here</p>
+            <input type="text" id="textInput" required class="username" />
+          </label>
+          <label>
+            <p class="default">your address here</p>
+            <input type="text" id="textInput" required class="address" />
+          </label>
+
+          <p class="default">thank you for your purchase</p>
+          <button class="reset-btn" type="submit">confirm</button>
+        </form>
       </div>
     </div>
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
-     <script src="app.js"></script>
-    <script src="test.js"></script>
-   
-
+    <script src="telebot.js"></script>
+    <script src="app.js"></script>
   </body>
 </html>

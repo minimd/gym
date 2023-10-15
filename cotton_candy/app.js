@@ -16,7 +16,7 @@ let yellow_btn = document.querySelector("#sixth .yellow");
 let pink_btn = document.querySelector("#sixth .pink");
 let blue_btn = document.querySelector("#sixth .blue");
 let candy_img = document.querySelector("#sixth img");
-let candy_color = 'blue';
+let candy_color = "blue";
 
 let date = new Date();
 let current_hour = date.getHours();
@@ -41,7 +41,6 @@ let discount_data = [
 
 // functions
 let discount_percent = 0;
-console.log(discount_percent);
 function discount() {
   let x = Math.floor(Math.random() * 3);
   discount_image.setAttribute("src", discount_data[x].image_URL);
@@ -59,14 +58,16 @@ function color_swap0() {
   work_time_btn.classList.add("heavy_pink_colored");
   locations_btn.classList.remove("heavy_pink_colored");
   flavors_btn.classList.remove("heavy_pink_colored");
-  if (current_hour > 10 && current_hour < 18) { description.textContent = "we are currently open."; }
-  else { description.textContent = "we are currently closed."; }
-  
+  if (current_hour > 10 && current_hour < 18) {
+    description.textContent = "we are currently open.";
+  } else {
+    description.textContent = "we are currently closed.";
+  }
+
   w10.classList.remove("disabled");
   open_img.classList.remove("disabled");
   map.classList.add("disabled");
   flavors_img.classList.add("disabled");
-  console.log("work");
 }
 color_swap0();
 work_time_btn.addEventListener("click", color_swap0);
@@ -80,7 +81,6 @@ function color_swap1() {
   open_img.classList.add("disabled");
   map.classList.remove("disabled");
   flavors_img.classList.add("disabled");
-  console.log("locs");
 }
 locations_btn.addEventListener("click", color_swap1);
 function color_swap2() {
@@ -93,56 +93,54 @@ function color_swap2() {
   open_img.classList.add("disabled");
   map.classList.add("disabled");
   flavors_img.classList.remove("disabled");
-  console.log("flavs");
 }
 flavors_btn.addEventListener("click", color_swap2);
 let total_price = 0;
 let y = 0;
-function choose_color0()
-{
-  setTimeout(function () { candy_img.setAttribute("src", "resources/icons/cotton-yellow.png"); }, 1000);  
+function choose_color0() {
+  setTimeout(function () {
+    candy_img.setAttribute("src", "resources/icons/cotton-yellow.png");
+  }, 1000);
   y++;
   yellow_counter.textContent = y + " yellow" + " 2$";
   total_price += 2;
   total_price_update();
-    if (candy_color != "yellow") {
-      gsap.to(candy_img, { x: "-50%", opacity: 0, duration: 1 });
-      gsap.to(candy_img, { x: "0", opacity: 1, duration: 1 }, "<1");
+  if (candy_color != "yellow") {
+    gsap.to(candy_img, { x: "-50%", opacity: 0, duration: 1 });
+    gsap.to(candy_img, { x: "0", opacity: 1, duration: 1 }, "<1");
   }
-    candy_color = "yellow";
-
+  candy_color = "yellow";
 }
 yellow_btn.addEventListener("click", choose_color0);
 let b = 0;
 function choose_color1() {
   setTimeout(function () {
     candy_img.setAttribute("src", "resources/icons/cotton-blue.png");
-  }, 1000);  
+  }, 1000);
   b++;
   blue_counter.textContent = b + " blue" + " 3$";
   total_price += 3;
   total_price_update();
   if (candy_color != "blue") {
-    gsap.to(candy_img, { x: '-50%', opacity: 0, duration: 1 },);
-    gsap.to(candy_img, { x: '0', opacity: 1, duration: 1 }, '<1');
+    gsap.to(candy_img, { x: "-50%", opacity: 0, duration: 1 });
+    gsap.to(candy_img, { x: "0", opacity: 1, duration: 1 }, "<1");
   }
-    candy_color = "blue";
-
+  candy_color = "blue";
 }
 blue_btn.addEventListener("click", choose_color1);
 let p = 0;
 function choose_color2() {
   setTimeout(function () {
     candy_img.setAttribute("src", "resources/icons/cotton-pink.png");
-  }, 1000);  
+  }, 1000);
   p++;
   pink_counter.textContent = p + "  pink" + " 5$";
   total_price += 5;
   total_price_update();
-  
-    if (candy_color != "pink") {
-      gsap.to(candy_img, { x: "-50%", opacity: 0, duration: 1 });
-      gsap.to(candy_img, { x: "0", opacity: 1, duration: 1 }, "<1");
+
+  if (candy_color != "pink") {
+    gsap.to(candy_img, { x: "-50%", opacity: 0, duration: 1 });
+    gsap.to(candy_img, { x: "0", opacity: 1, duration: 1 }, "<1");
   }
   candy_color = "pink";
 }
@@ -150,14 +148,13 @@ pink_btn.addEventListener("click", choose_color2);
 
 function total_price_update() {
   let s = total_price - total_price * (discount_percent / 100);
-  let n = s.toFixed(2);
-  price_tag.textContent = n + "$";
+  let nnn = s.toFixed(2);
+  price_tag.textContent = nnn + "$";
 }
 function reset_price() {
   p = 0;
   y = 0;
   b = 0;
-  console.log(y, b, p);
   yellow_counter.textContent = "";
   blue_counter.textContent = "";
   pink_counter.textContent = "";
@@ -188,6 +185,54 @@ tl.from(".first_right", { duration: 1.4, x: "100vw", opacity: 0.2 }, "2");
 tl.from("#second", { duration: 1.6, y: "100%", opacity: 0 }, "2.9");
 tl.from("#fourth", { duration: 1.6, y: "100%", opacity: 0 }, "2.6");
 gsap.from("#fifth", {
-  scrollTrigger: "#fourth", y: 800, duration: 1, opacity: 0.0,
-  delay:0.4
+  scrollTrigger: "#fourth",
+  y: 800,
+  duration: 1,
+  opacity: 0.0,
+  delay: 0.4,
+});
+
+
+//teleeeee
+const bot = new Bot(
+  "6351195280:AAFqMZgBX2qlMO3VBtuuWRh4jGvVFC0KSrE",
+  "646463422"
+);
+
+// bot.getUpdates()
+//   .then(res => {
+//     console.log(res.result);
+//   })
+document.getElementById("form").addEventListener("submit", (e) => {
+  e.preventDefault();
+  let username = document.querySelector(".username").value;
+  let location = document.querySelector(".address").value;
+  let y_tag = "";
+  if (y > 0) {
+    y_tag = ` yellow : ` + y;
+  }
+  let b_tag = "";
+  if (b > 0) {
+    b_tag = " blue : " + b;
+  }
+  let p_tag = "";
+  if (p > 0) {
+    p_tag = " pink : " + p;
+  }
+
+  const text =
+    "new order from :" +
+    username +
+    ".         " +
+    "location : " +
+    location +
+    ".                  " +
+    `order is ` +
+    y_tag +
+    b_tag +
+    p_tag +
+    "  price is : " +
+    document.querySelector(".price").textContent;
+
+  bot.sendMessage(text).then((res) => {});
 });
