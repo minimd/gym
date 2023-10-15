@@ -84,8 +84,12 @@ div.last {
   min-height: 900px;
   background-color: #e1e1e1;
   background-size: contain;
+<<<<<<< Updated upstream
   width: 100%;
   filter: drop-shadow(0px -20px 30px #4e4e4e);
+=======
+  filter: drop-shadow(0px 20px 1000px #4e4e4e);
+>>>>>>> Stashed changes
   display: flex;
   flex-direction: column;
   justify-content: baseline;
