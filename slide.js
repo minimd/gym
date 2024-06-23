@@ -85,7 +85,7 @@ let observer1 = new IntersectionObserver(
       if (binary2 == 0) {
         
         let string =
-          " i'm mohammed. an ambitious web designer and developer, an artist (check my instagram), on my last stage in engineering college, and a tall handsome guy :) ";
+          " i'm mohammed. an ambitious web designer and developer, an artist (check my instagram), just finished my engineering college, and a tall handsome guy :) ";
         let str = string.split("");
         let el = document.querySelector(".third p.text");
         (function animate() {
